@@ -1,76 +1,80 @@
-Somnia Bot 🚀
+# Somnia Bot 🚀
 
-An advanced and adaptable automation solution for the Somnia Network, offering a wide array of features to streamline testnet activities.
+An advanced and adaptable automation solution for the **Somnia Network**, offering a wide array of features to streamline testnet activities.
 
-TUTORIAL LINK: nelnabr.gitbook.io/auto-labs/somnia/somnia-eng
+**TUTORIAL LINK:** [nelnabr.gitbook.io/auto-labs/somnia/somnia-eng](https://nelnabr.gitbook.io/auto-labs/somnia/somnia-eng)
 
-🌟 Key Features
-	•	✨ Multi-threaded execution
-	•	🔁 Automatic retry system with customizable attempts
-	•	🛡️ Proxy support for anonymity and security
-	•	📊 Select specific account ranges
-	•	⏱️ Randomized delays between actions
-	•	📩 Telegram log integration
-	•	📃 Comprehensive transaction logging
-	•	🔧 Modular task-based architecture
-	•	🌐 Integration with Twitter and Discord
-	•	👥 Discord invite automation
-	•	💬 Blockchain messaging with Quills
+## 🌟 Key Features
 
-🎯 Supported Actions
+- ✨ Multi-threaded execution
+- 🔁 Automatic retry system with customizable attempts
+- 🛡️ Proxy support for anonymity and security
+- 📊 Select specific account ranges
+- ⏱️ Randomized delays between actions
+- 📩 Telegram log integration
+- 📃 Comprehensive transaction logging
+- 🔧 Modular task-based architecture
+- 🌐 Integration with Twitter and Discord
+- 👥 Discord invite automation
+- 💬 Blockchain messaging with Quills
 
-Network Tools:
-	•	Access Somnia Faucet
-	•	Transfer tokens
-	•	Set user handles
-	•	Retrieve account/network data
-	•	Connect social profiles (Twitter, Discord)
-	•	Participate in campaigns
-	•	Invite via Discord
+## 🎯 Supported Actions
 
-Minting & NFT Operations:
-	•	Mint Ping Pong tokens
-	•	Mint SHANNON NFT (Nerzo)
-	•	Mint NEE NFT (Nerzo)
-	•	Mint YAPPERS NFT (Alze)
-	•	Mint SOMNI NFT (Mintaura)
-	•	Deploy smart contracts (Mintair)
+**Network Tools:**
+- Access Somnia Faucet
+- Transfer tokens
+- Set user handles
+- Retrieve account/network data
+- Connect social profiles (Twitter, Discord)
+- Participate in campaigns
+- Invite via Discord
 
-Swapping & Messaging:
-	•	Token swaps (Ping Pong)
-	•	Send blockchain-based messages via Quills
+**Minting & NFT Operations:**
+- Mint Ping Pong tokens
+- Mint SHANNON NFT (Nerzo)
+- Mint NEE NFT (Nerzo)
+- Mint YAPPERS NFT (Alze)
+- Mint SOMNI NFT (Mintaura)
+- Deploy smart contracts (Mintair)
 
-📋 System Requirements
-	•	Python version 3.11.1 to 3.11.6
-	•	Wallet private keys (Somnia Network)
-	•	Proxy list for secure access
-	•	Twitter API tokens
-	•	Discord bot/user tokens
-	•	Messages for Quills
+**Swapping & Messaging:**
+- Token swaps (Ping Pong)
+- Send blockchain-based messages via Quills
 
-🚀 Setup Instructions
-	1.	Clone the Repository:
+## 📋 System Requirements
 
-git clone https://github.com/neLNABR/Somnia-Auto.git
-cd Somnia-Auto
+- Python version `3.11.1` to `3.11.6`
+- Wallet private keys (Somnia Network)
+- Proxy list for secure access
+- Twitter API tokens
+- Discord bot/user tokens
+- Messages for Quills
 
+## 🚀 Setup Instructions
 
-	2.	Install Dependencies:
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/neLNABR/Somnia.git
+   cd Somnia
+   ```
 
-pip install -r requirements.txt
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+3. **Configuration Steps:**
+   - Edit `config.yaml`
+   - Add wallet keys to `data/private_keys.txt`
+   - Add proxies to `data/proxies.txt`
+   - Add Twitter tokens to `data/twitter_tokens.txt`
+   - Add Discord tokens to `data/discord_tokens.txt`
+   - Add Quills messages to `data/random_message_quills.txt`
 
-	3.	Configuration Steps:
-	•	Edit config.yaml
-	•	Add wallet keys to data/private_keys.txt
-	•	Add proxies to data/proxies.txt
-	•	Add Twitter tokens to data/twitter_tokens.txt
-	•	Add Discord tokens to data/discord_tokens.txt
-	•	Add Quills messages to data/random_message_quills.txt
+## 📁 Directory Overview
 
-📁 Directory Overview
-
-Somnia-Auto/
+```
+Somnia/
 ├── data/
 │   ├── private_keys.txt
 │   ├── proxies.txt
@@ -82,18 +86,21 @@ Somnia-Auto/
 │   └── utils/
 ├── config.yaml
 └── tasks.py
+```
 
-📝 Configuration Guide
+## 📝 Configuration Guide
 
-1. Input Data Files
-	•	data/private_keys.txt: Private keys (one per line)
-	•	data/proxies.txt: Proxies (http://user:pass@ip:port)
-	•	data/twitter_tokens.txt: Twitter tokens (one per line)
-	•	data/discord_tokens.txt: Discord tokens (one per line)
-	•	data/random_message_quills.txt: Messages for Quills (one per line)
+### 1. Input Data Files
 
-2. Main Configuration (config.yaml)
+- `data/private_keys.txt`: Private keys (one per line)
+- `data/proxies.txt`: Proxies (`http://user:pass@ip:port`)
+- `data/twitter_tokens.txt`: Twitter tokens (one per line)
+- `data/discord_tokens.txt`: Discord tokens (one per line)
+- `data/random_message_quills.txt`: Messages for Quills (one per line)
 
+### 2. Main Configuration (`config.yaml`)
+
+```yaml
 SETTINGS:
   THREADS: 1
   ATTEMPTS: 5
@@ -102,9 +109,11 @@ SETTINGS:
   SHUFFLE_WALLETS: true
   PAUSE_BETWEEN_ATTEMPTS: [3, 10]
   PAUSE_BETWEEN_SWAPS: [3, 10]
+```
 
-3. Module-Specific Settings
+### 3. Module-Specific Settings
 
+```yaml
 SOMNIA_NETWORK:
   SOMNIA_SWAPS:
     BALANCE_PERCENT_TO_SWAP: [5, 10]
@@ -120,31 +129,35 @@ SOMNIA_NETWORK:
 
   DISCORD_INVITER:
     INVITE_LINK: ""
+```
 
-🎮 Running the Bot
+## 🎮 Running the Bot
 
-Task Setup
+### Task Setup
 
-Define which tasks to execute by editing tasks.py:
+Edit `tasks.py` to define which tasks to execute:
 
-TASKS = ["FULL_TASK"]
+```python
+TASKS = ["CAMPAIGNS"]
+```
 
-Available Tasks:
-	•	CAMPAIGNS
-	•	FAUCET
-	•	SEND_TOKENS
-	•	CONNECT_SOCIALS
-	•	MINT_PING_PONG
-	•	SWAPS_PING_PONG
-	•	QUILLS_CHAT
-	•	SOMNIA_NETWORK_SET_USERNAME
-	•	SOMNIA_NETWORK_INFO
-	•	DISCORD_INVITER
+**Available Tasks:**
+- `CAMPAIGNS`
+- `FAUCET`
+- `SEND_TOKENS`
+- `CONNECT_SOCIALS`
+- `MINT_PING_PONG`
+- `SWAPS_PING_PONG`
+- `QUILLS_CHAT`
+- `SOMNIA_NETWORK_SET_USERNAME`
+- `SOMNIA_NETWORK_INFO`
+- `DISCORD_INVITER`
 
-Creating Custom Sequences
+### Creating Custom Sequences
 
 Example:
 
+```python
 TASKS = ["MY_CUSTOM_TASK"]
 
 MY_CUSTOM_TASK = [
@@ -155,15 +168,18 @@ MY_CUSTOM_TASK = [
     "connect_socials",
     "discord_inviter"
 ]
+```
 
-Launch Command
+### Launch Command
 
+```bash
 python main.py
+```
 
-📜 License
+## 📜 License
 
-This project is licensed under the MIT License.
+MIT License
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 
-This tool is intended for educational use only. Use responsibly and ensure compliance with all applicable platform rules and terms.
+This tool is intended for educational use only. Use responsibly and in accordance with relevant terms of service.
