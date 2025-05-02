@@ -9,7 +9,6 @@ FULL_TASK = [
     "mint_ping_pong",
     "swaps_ping_pong",
     "quills_chat",
-    "campaigns",
     "nerzo_shannon",
     "nerzo_nee",
     "alze_yappers",
