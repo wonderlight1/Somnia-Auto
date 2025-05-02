@@ -1,0 +1,20 @@
+blockchain
+wallet
+bitcoin
+ethereum
+token
+coin
+mining
+staking
+ledger
+gas
+smart contract
+NFT
+private key
+public key
+exchange
+hodl
+altcoin
+airdrop
+defi
+metamask
