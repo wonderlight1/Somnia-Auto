@@ -1,4 +1,4 @@
-# Somnia Bot 🚀
+# Somnia Bot 🔮
 
 An advanced and adaptable automation solution for the **Somnia Network**, offering a wide array of features to streamline testnet activities.
 
@@ -54,8 +54,8 @@ An advanced and adaptable automation solution for the **Somnia Network**, offeri
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/neLNABR/Somnia.git
-   cd Somnia
+   git clone https://github.com/neLNABR/Somnia-Auto.git
+   cd Somnia-Auto
    ```
 
 2. **Install Dependencies:**
@@ -74,7 +74,7 @@ An advanced and adaptable automation solution for the **Somnia Network**, offeri
 ## 📁 Directory Overview
 
 ```
-Somnia/
+Somnia-Auto/
 ├── data/
 │   ├── private_keys.txt
 │   ├── proxies.txt
@@ -138,7 +138,7 @@ SOMNIA_NETWORK:
 Edit `tasks.py` to define which tasks to execute:
 
 ```python
-TASKS = ["CAMPAIGNS"]
+TASKS = ["FULL_TASK"]
 ```
 
 **Available Tasks:**
